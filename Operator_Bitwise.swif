@@ -1,0 +1,55 @@
+//Bitwise NOT Operator
+let initialBits: UInt8 = 0b00001111
+let invertedBits = ~initialBits  
+print("Nilai invertedBits adalah \(invertedBits) atau \(String(invertedBits, radix: 2))")
+
+//Operator Bitwise AND 
+
+let firstSixBits: UInt8 = 0b11111100
+let lastSixBits: UInt8  = 0b00111111
+let middleFourBits = firstSixBits & lastSixBits 
+print("Nilai middleFourBits adalah \(middleFourBits) atau \(String(middleFourBits, radix: 2))")
+
+//Operator Bitwise OR 
+let someBits: UInt8 = 0b10110010
+let moreBits: UInt8 = 0b01011110
+let combinedbits = someBits | moreBits  
+print("Nilai combinedbits adalah \(combinedbits) atau \(String(combinedbits, radix: 2))")
+
+//Bitwise XOR Operator
+let firstBits: UInt8 = 0b00010100
+let otherBits: UInt8 = 0b00000101
+let outputBits = firstBits ^ otherBits  
+print("Nilai outputBits adalah \(outputBits) atau \(String(outputBits, radix: 2))")
+
+//Operators Bitwise Geser ke Kiri dan ke Kanan 
+let shiftBits: UInt8 = 0b00000100
+print("Bit awal \(String(shiftBits, radix: 2)) bernilai \(shiftBits)")
+
+let shift1 = shiftBits << 1
+print("Operasi \(String(shiftBits, radix: 2)) bergerser ke kiri 1 kali, bernilai \(shift1) atau \(String(shift1, radix: 2))")
+
+let shift2 = shiftBits << 2
+print("Operasi \(String(shiftBits, radix: 2)) bergerser ke kiri 2 kali, bernilai \(shift2) atau \(String(shift2, radix: 2))")
+
+let shift3 = shiftBits << 4
+print("Operasi \(String(shiftBits, radix: 2)) bergerser ke kiri 4 kali, bernilai \(shift3) atau \(String(shift3, radix: 2))")
+
+let shift4 = shiftBits << 5
+print("Operasi \(String(shiftBits, radix: 2)) bergerser ke kiri 5 kali, bernilai \(shift4) atau \(String(shift4, radix: 2))")
+
+let shift5 = shiftBits >> 2
+print("Operasi \(String(shiftBits, radix: 2)) bergerser ke kanan 2 kali, bernilai \(shift5) atau \(String(shift5, radix: 2))")
+
+
+let pink: UInt32 = 0xCC6699
+
+let redComponent = (pink & 0xFF0000) >> 16 
+print("redComponent bernilai \(String(redComponent, radix: 16)) atau \(redComponent).")
+
+let greenComponent = (pink & 0x00FF00) >> 8   
+print("greenComponent bernilai \(String(greenComponent, radix: 16)) atau \(greenComponent).")
+
+///
+let blueComponent = pink & 0x0000FF       
+print("blueComponent bernilai \(String(blueComponent, radix: 16)) atau \(blueComponent).")
